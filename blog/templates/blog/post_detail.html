@@ -13,7 +13,7 @@
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Core theme CSS (includes Bootstrap)-->
-
+        <script src="https://kit.fontawesome.com/dc96642a54.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <!-- Responsive navbar-->
@@ -59,6 +59,11 @@
                         <section class="mb-5">
                             {{ post.content }}
                         </section>
+                        {% if post.file_upload %}
+                        <a href="{{ post.file_upload.url }}" class="btn btn-outline-dark" role="button" download>
+                            <i class="fa-regular fa-file"></i> {{ post.get_file_name }}
+                        </a>
+                        {% endif %}
                     </article>
                     <!-- Comments section-->
                     <section class="mb-5">
