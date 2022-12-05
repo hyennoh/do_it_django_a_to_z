@@ -28,7 +28,7 @@
 
                             <!--Edit {ost 버튼 추가-->
                             {% if user.is_authenticated and user == post.author %}
-                                <a class="btn btn-info btn-sm float-right" href="'/blog/update_post/{{ post.pk }}/" role="button"><i class="fas fa-pen"></i> Edit Post</a>
+                                <a class="btn btn-info btn-sm float-right" href="/blog/update_post/{{ post.pk }}/" role="button"><i class="fas fa-pen"></i> Edit Post</a>
                             {% endif %}
 
                             <!-- Post categories-->
@@ -45,7 +45,7 @@
                             </figure>
                         <!-- Post content-->
                         <section class="mb-5">
-                            {{ post.content }}
+                            {{ post.get_content_markdown | safe }}
                         </section>
 
                         {% if post.tags.exists %}
