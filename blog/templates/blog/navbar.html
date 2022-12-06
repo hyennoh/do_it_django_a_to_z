@@ -1,4 +1,5 @@
 {% load socialaccount %}
+{% load static %}
 
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -28,7 +29,7 @@
             {% if user.socialaccount_set.all.0.get_avatar_url %}
                 <img class="rounded-circle" width="25px" src="{{ user.socialaccount_set.all.0.get_avatar_url }}" alt="">
             {% else %}
-                <img class="rounded-circle" width="30px" src="https://doitdjango.com/avatar/id/1375/9f71ac48368fcf60/svg/{{ user.email }}">
+                <img class="rounded-circle" width="30px" src="{% static 'blog/imgs/dog.png' %}">
             {% endif %}
             &nbsp;
             {{ user.username }}
