@@ -1,20 +1,189 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>개발자 혠오입니다.</title>
+    <title> About 혠오 </title>
+
+    <link rel="stylesheet" href="{% static 'blog/bootstrap/bootstrap.min.css' %}" media="screen">
+    <link rel="stylesheet" href="{% static 'single_pages/css/about_me.css' %}" media="screen">
+
+    <script src="https://kit.fontawesome.com/dc96642a54.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-<nav>
-    <a href="/blog/">Blog</a>
-    <a href="/about_me/">About me</a>
-</nav>
+{% include 'blog/navbar.html' %}
 
-<h1>안녕하세요. 혠오입니다.</h1>
-<h2>이력</h2>
-<h2>Portfolio</h2>
-<h3>아직 공사 중입니다.</h3>
+<section>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-lg-8">
+                <h1>HYENNOH'S BLOG</h1>
+                <br/>
+                <p class="lead">
+                    안녕하세요 혠오입니다! (*ᴗ͈ˬᴗ͈)ꕤ*.ﾟ<br/>
+                </p>
+
+                <ul>
+                    <li>CATEGORY</li>
+                    <ul>
+                        <li>일상</li>
+                        <li>취미</li>
+                    </ul>
+                    &nbsp;
+                    <li>FAVORITE</li>
+                    <ul>
+                        <li>사진 찍는 것을 좋아합니다.</li>
+                        <li>자연이 좋아요, 특히 연두빛의 풍경을 좋아합니다.</li>
+                    </ul>
+                    &nbsp;
+                </ul>
+            </div>
+            <div class="col-lg-4">
+                <img class="img-fluid" src="{% static 'single_pages/images/corgi.jpg' %}">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bg-light margin-for-footer" >
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2>A recent photographs</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card" data-toggle="modal" data-target="#1">
+                    <img class="card-img-top" src="{% static 'single_pages/images/1.jpg' %}">
+                    <div class="card-body">
+                        <h5 class="card-title">광한루원의 풍경입니다.</h5>
+                        <p>사이사이에 보이는 단풍이 아름다움을 더해주었습니다. 연못에는 잉어들이 살아요. 엄청 많습니다. 참고로 잉어밥은 2,000원입니다.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card" data-toggle="modal" data-target="#2">
+                    <img class="card-img-top" src="{% static 'single_pages/images/2.jpg' %}">
+                    <div class="card-body">
+                        <h5 class="card-title">광한루원의 또 다른 풍경입니다.</h5>
+                        <p>고즈넉하고 평온한 분위기가 정말 좋았습니다.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card" data-toggle="modal" data-target="#3">
+                    <img class="card-img-top" src="{% static 'single_pages/images/3.jpg' %}">
+                    <div class="card-body">
+                        <h5 class="card-title">윤슬입니다.</h5>
+                        <p>햇빛에 비쳐 반짝이는 모습이 예뻐서 담아보았습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+</section>
+
+
+
+
+<!--Modal-->
+<div class="modal fade" id="1" tabindex="-1" role="dialog" aria-labelledby="1ModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="1ModalLabel">광한루원의 풍경입니다.</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <img class="img-fluid" src="{% static 'single_pages/images/1.jpg' %}">
+                    </div>
+                    <div class="col-lg-5">
+                        <p>사이사이에 보이는 단풍이 아름다움을 더해주었습니다. 연못에는 잉어들이 살아요. 엄청 많습니다. 참고로 잉어밥은 2,000원입니다.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="2" tabindex="-1" role="dialog" aria-labelledby="2ModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="2ModalLabel">광한루원의 또 다른 풍경입니다.</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <img class="img-fluid" src="{% static 'single_pages/images/2.jpg' %}">
+                    </div>
+                    <div class="col-lg-5">
+                        <p>고즈넉하고 평온한 분위기가 정말 좋았습니다.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="3" tabindex="-1" role="dialog" aria-labelledby="3ModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="3ModalLabel">윤슬입니다.</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <img class="img-fluid" src="{% static 'single_pages/images/pycon_sy_2017.png' %}">
+                    </div>
+                    <div class="col-lg-5">
+                        <p>햇빛에 비쳐 반짝이는 모습이 예뻐서 담아보았습니다.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="fixed-bottom">
+    {% include 'blog/footer.html' %}
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
 
 </body>
 </html>
