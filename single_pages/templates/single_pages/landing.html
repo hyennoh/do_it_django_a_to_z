@@ -4,7 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <title>hyworld</title>
+    <style type="text/css">
+        @font-face {
+    font-family: 'establishRoomNo703OTF';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/establishRoomNo703OTF.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
+
+    </style>
     <link rel="stylesheet" href="{% static 'blog/bootstrap/bootstrap.min.css' %}" media="screen">
     <link rel="stylesheet" href="{% static 'single_pages/css/landing.css' %}" media="screen">
 
@@ -20,11 +29,11 @@
             <div class="col-lg-6 text-light">
                 &nbsp;
                 &nbsp;
-                <h1 class="mt-5">HYENNOH'S BLOG</h1>
+                <h1 class="mt-5" style="font-family: 'establishRoomNo703OTF'"><b>H Y E N N O H 'S <br>B L O G</b></h1>
 
             </div>
             <div class="col-lg-5 mt-5">
-                <h2 class="text-light">Recent posts</h2>
+                <h2 class="text-light" style="font-family: 'establishRoomNo703OTF'">Recent posts</h2>
                 {% for post in recent_posts %}
                     <div class="card mt-1">
                         <div class="card-body">
